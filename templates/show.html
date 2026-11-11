@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>All Contacts</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsa
+      quisquam vel perferendis, distinctio voluptas vitae ex minus autem? Eius
+      dicta enim fugiat possimus. Quod laboriosam eaque maiores ullam animi!
+      Atque rem perspiciatis eum veniam nisi recusandae, accusantium asperiores
+      nulla unde quod totam ab nemo iste ducimus consequuntur obcaecati nesciunt
+      dignissimos ipsum, molestiae doloremque. Eaque aliquam molestias obcaecati
+      ut impedit. Ipsa asperiores repudiandae officiis natus quo voluptatem
+      numquam non corrupti voluptatum voluptas, esse voluptate molestiae
+      blanditiis? Adipisci mollitia itaque fugiat? Iure, nisi voluptates labore
+      accusamus dicta ducimus commodi expedita! Corrupti. Fugiat molestiae
+      distinctio odit deleniti. Facere quo, doloribus dolor praesentium aperiam
+      incidunt veniam omnis! Excepturi maxime ea voluptatum, voluptas eos
+      delectus esse sit distinctio porro. Fugit ut sequi eius praesentium!
+    </p>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Subject</th>
+        <th>Message</th>
+      </tr>
+
+      {% for contact in all %}
+
+      <tr>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.email }}</td>
+        <td>{{ contact.subject }}</td>
+        <td>{{ contact.message }}</td>
+      </tr>
+
+      {% endfor %}
+    </table>
+  </body>
+</html>
