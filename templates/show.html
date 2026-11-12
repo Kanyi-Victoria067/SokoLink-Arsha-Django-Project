@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Admoin Page</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
   </head>
 
   <body>
-    <h1>All Contacts</h1>
+    <h1 class="text-center">All Contacts</h1>
 
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae ipsa
@@ -25,8 +31,8 @@
       delectus esse sit distinctio porro. Fugit ut sequi eius praesentium!
     </p>
 
-    <table>
-      <tr>
+    <table class="table table-striped table-hover table-bordered">
+      <tr class="table-dark">
         <th>Name</th>
         <th>Email</th>
         <th>Subject</th>
