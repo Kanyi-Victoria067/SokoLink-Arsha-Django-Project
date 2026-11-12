@@ -6,10 +6,12 @@
     <title>Admoin Page</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+    />
 
     <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-
   </head>
 
   <body>
@@ -37,6 +39,7 @@
         <th>Email</th>
         <th>Subject</th>
         <th>Message</th>
+        <th>Action</th>
       </tr>
 
       {% for contact in all %}
@@ -46,6 +49,10 @@
         <td>{{ contact.email }}</td>
         <td>{{ contact.subject }}</td>
         <td>{{ contact.message }}</td>
+        <td>
+          <a href="/edit/{{ contact.id }}" class="btn btn-warning">Edit</a>
+          <a href="/delete/{{ contact.id }}" class="btn btn-danger">Delete</a>
+        </td>
       </tr>
 
       {% endfor %}
